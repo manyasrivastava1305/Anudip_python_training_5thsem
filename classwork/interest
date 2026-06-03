@@ -1,9 +1,11 @@
 p = float(input("Enter principal amount: "))
-if(p<0):
+r = float(input("Enter rate of interest: ")) 
+t = float(input("Enter time period in years: "))
+if(p<0 or r<0 or t<0):
     print("invalid")
 else:
     p=p
-    r = float(input("Enter rate of interest: ")) 
-    t = float(input("Enter time period in years: "))
+    r = r
+    t = t
     s: float = (p * r * t) / 100
     print("Simple interest:", s)
