@@ -1,0 +1,19 @@
+time= int(input("Enter time in secs"))
+if (time<0):
+    print("invalid input")
+elif(time>=3600):
+     h= time // 3600
+     s = time % 3600
+     min = s// 60
+     s=time% 60
+     print("time is", h, "h",min,"min",s,"sec")
+elif(3600>time>=60):
+     h= 0
+     min = time // 60
+     s = time% 60
+     print("time is", h, "h",min,"min",s,"sec")
+else:
+    h=0
+    min=0
+    s = time
+    print("time is", h, "h",min,"min",s,"sec")
