@@ -33,6 +33,7 @@ print("Confirmed Passengers:")
 for p_id, dest, status in bookings:
     if status == "Confirmed":
         print(f"{p_id} {dest}")
+print("-------------------------")
 
 # --- Task 2: Count the number of passengers travelling to Delhi ---
 delhi_count = 0
@@ -40,6 +41,7 @@ for p_id, dest, status in bookings:
     if dest == "Delhi":
         delhi_count += 1
 print(f"\nPassengers Travelling to Delhi: {delhi_count}")
+print("-------------------------")
 
 # --- Task 3: Count Confirmed, Waiting, and Cancelled bookings separately ---
 confirmed_count = 0
@@ -57,14 +59,14 @@ for p_id, dest, status in bookings:
 print(f"\nConfirmed: {confirmed_count}")
 print(f"Waiting: {waiting_count}")
 print(f"Cancelled: {cancelled_count}")
-
+print("-------------------------")
 # --- Task 4: Create a list containing passenger IDs with Waiting status ---
 waiting_list = []
 for p_id, dest, status in bookings:
     if status == "Waiting":
         waiting_list.append(p_id)
 print(f"\nWaiting List:\n{waiting_list}")
-
+print("-------------------------")
 # --- Task 5: Determine which destination has the highest number of bookings ---
 # We use a dictionary to dynamically count bookings per destination
 dest_counts = {}
@@ -73,15 +75,8 @@ for p_id, dest, status in bookings:
         dest_counts[dest] += 1
     else:
         dest_counts[dest] = 1
+
 # Find the key with the maximum value in the dictionary
 most_booked = max(dest_counts, key=dest_counts.get)
 print(f"\nMost Booked Destination:\n{most_booked}")
-
-
-
-
-
-
-
-
-
+print("-------------------------")
