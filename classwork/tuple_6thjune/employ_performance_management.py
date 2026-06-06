@@ -34,9 +34,12 @@ employees = (
 
 # --- Task 1: Display details of employees scoring 80 or above ---
 print("Employees Scoring 80 or Above:")
-for emp_id, name, score in employees:
-    if score >= 80:
-        print(f"{emp_id} {name} {score}")
+for record in employees:
+    if record[2] >= 80:
+     print("id:",record[0])
+     print("Name:",record[1])
+     print("Score",record[2])
+     print("-------------------------")
 
 # --- Task 2: Count the number of employees who need improvement (score below 60) ---
 needs_improvement_count = 0
