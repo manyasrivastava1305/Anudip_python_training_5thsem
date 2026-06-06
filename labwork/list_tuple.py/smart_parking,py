@@ -1,0 +1,46 @@
+# Parking slots are represented as: 
+# slots = [1, 0, 1, 1, 0, 0, 1, 0] 
+# Where: 
+# • 1 = Occupied  
+# • 0 = Available  
+# Write a program to: 
+# • Count occupied and available slots.  
+# • Find the first available slot.  
+# • Display all available slot numbers.  
+# • Check whether parking occupancy exceeds 75%. 
+occupied_count = 0
+available_count = 0
+available_slots_numbers = []
+first_available_slot = -1  # Default if no slot is available
+
+# Loop through the list using index to track slot numbers
+# We use range(len(slots)) to get the index (0 to 7)
+for index in range(len(slots)):
+    slot_status = slots[index]
+    slot_number = index + 1  # Slot numbers usually start from 1, not 0
+    
+    if slot_status == 1:
+        occupied_count += 1
+    else:
+        available_count += 1
+        available_slots_numbers.append(slot_number)
+        
+        # Capture the first available slot if it hasn't been found yet
+        if first_available_slot == -1:
+            first_available_slot = slot_number
+
+# Calculate occupancy percentage
+total_slots = len(slots)
+occupancy_percentage = (occupied_count / total_slots) * 100
+
+# Check if occupancy exceeds 75%
+exceeds_75 = occupancy_percentage > 75
+
+# Display the results
+print("--- Parking Lot Status Report ---")
+print("Occupied Slots:", occupied_count)
+print("Available Slots:", available_count)
+print("First Available Slot Number:", first_available_slot)
+print("List of All Available Slot Numbers:", available_slots_numbers)
+print("Current Occupancy Rate:", occupancy_percentage, "%")
+print("Does Occupancy Exceed 75%?:", exceeds_75)
