@@ -19,6 +19,7 @@
 # 4. Create a list containing passenger IDs with Waiting status.  
 # 5. Determine which destination has the highest number of bookings. 
 # Initial data given in the problem
+# Initial data given in the problem
 bookings = (
     ("P101", "Delhi", "Confirmed"),
     ("P102", "Mumbai", "Waiting"),
@@ -30,17 +31,18 @@ bookings = (
 
 # --- Task 1: Display all passengers whose booking status is Confirmed ---
 print("Confirmed Passengers:")
-for p_id, dest, status in bookings:
-    if status == "Confirmed":
-        print(f"{p_id} {dest}")
+for record in bookings:
+    if record[2] == "Confirmed":
+        print("Id:",record[0])
+        print("place:",record[1])
 print("-------------------------")
 
 # --- Task 2: Count the number of passengers travelling to Delhi ---
 delhi_count = 0
-for p_id, dest, status in bookings:
-    if dest == "Delhi":
+for record in bookings:
+    if record[1] == "Delhi":
         delhi_count += 1
-print(f"\nPassengers Travelling to Delhi: {delhi_count}")
+print("\nPassengers Travelling to Delhi:",delhi_count)
 print("-------------------------")
 
 # --- Task 3: Count Confirmed, Waiting, and Cancelled bookings separately ---
@@ -56,16 +58,16 @@ for p_id, dest, status in bookings:
     elif status == "Cancelled":
         cancelled_count += 1
 
-print(f"\nConfirmed: {confirmed_count}")
-print(f"Waiting: {waiting_count}")
-print(f"Cancelled: {cancelled_count}")
+print("\nConfirmed:", confirmed_count)
+print("Waiting: ",waiting_count)
+print("Cancelled:",cancelled_count)
 print("-------------------------")
 # --- Task 4: Create a list containing passenger IDs with Waiting status ---
 waiting_list = []
-for p_id, dest, status in bookings:
-    if status == "Waiting":
+for records in bookings:
+    if records[2] == "Waiting":
         waiting_list.append(p_id)
-print(f"\nWaiting List:\n{waiting_list}")
+print("\nWaiting List:\n",waiting_list)
 print("-------------------------")
 # --- Task 5: Determine which destination has the highest number of bookings ---
 # We use a dictionary to dynamically count bookings per destination
@@ -78,5 +80,5 @@ for p_id, dest, status in bookings:
 
 # Find the key with the maximum value in the dictionary
 most_booked = max(dest_counts, key=dest_counts.get)
-print(f"\nMost Booked Destination:\n{most_booked}")
+print("\nMost Booked Destination:\n",most_booked)
 print("-------------------------")
