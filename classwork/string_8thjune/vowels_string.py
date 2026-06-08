@@ -1,13 +1,26 @@
 # write a program to input the sentence and display the frequency of each vowel which is present in that sentence ignoring the case
 sentence = input("Enter a sentence: ")
 vowels = "aeiouAEIOU"
-#create a dictionary to store the frequency of each vowel
-frequency = {vowel: 0 for vowel in vowels}
+a=e=i=o=u=0
 for char in sentence:
     if char in vowels:
-        #increment the frequency of the vowel in the dictionary
-        frequency[char] += 1
-        #print the frequency of each vowel
-for vowel, count in frequency.items():
-    if count > 0:
-        print("Frequency of vowel:" , vowel , " is ",count)
+        if char in "a" or char in "A":
+            a += 1
+        elif char in "e" or char in "E":
+            e += 1
+        elif char in "i" or char in "I":
+            i += 1
+        elif char in "o" or char in "O":
+            o += 1
+        elif char in "u" or char in "U":
+            u += 1
+if a > 0:
+    print("Frequency of vowel 'a':", a) 
+if e > 0:
+    print("Frequency of vowel 'e':", e)
+if i > 0:
+    print("Frequency of vowel 'i':", i)
+if o > 0:
+    print("Frequency of vowel 'o':", o)
+if u > 0:
+    print("Frequency of vowel 'u':", u)
