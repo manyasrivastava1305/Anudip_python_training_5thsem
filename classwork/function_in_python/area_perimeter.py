@@ -6,12 +6,12 @@ while True:
     print("---------------------------------")
     print("           MAIN SHAPE MENU           ")
     print("---------------------------------")
-    shape = input("Enter the shape (rectangle/circle/square) or 'exit' to quit: ").lower()
-    
+    shape = input("Enter the shape (rectangle/circle/square) or 'exit' to quit: ")
+    # to exit
     if shape == "exit":
         print("\nExiting the program. Goodbye!")
         break
-        
+    # for other choices    
     if shape not in ["rectangle", "circle", "square"]:
         print("Invalid shape selection. Please try again.")
         continue
@@ -36,7 +36,7 @@ while True:
             area, perimeter = rectangle(length, width)
             
             # Ask for operation preference
-            operation = input("Calculate area or perimeter?: ").strip().lower()
+            operation = input("Calculate area or perimeter?: ")
             if operation == "area":
                 print("The area of the rectangle is:" ,area)
             elif operation == "perimeter":
@@ -61,7 +61,7 @@ while True:
                 
             area, perimeter = circle(radius)
             
-            operation = input("Calculate area or perimeter?: ").strip().lower()
+            operation = input("Calculate area or perimeter?: ")
             if operation == "area":
                 print("The area of the circle is:" ,area)
             elif operation == "perimeter":
@@ -85,7 +85,7 @@ while True:
                 
             area, perimeter = square(side)
             
-            operation = input("Calculate area or perimeter?: ").strip().lower()
+            operation = input("Calculate area or perimeter?: ")
             if operation == "area":
                 print("The area of the square is:" ,area)
             elif operation == "perimeter":
