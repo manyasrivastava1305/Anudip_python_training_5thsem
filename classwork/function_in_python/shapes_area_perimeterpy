@@ -1,0 +1,25 @@
+#function to calculate the area and perimeter of 2D shapes
+#function to calculate the area and perimeter of a rectangle
+def rectangle(length, width):
+    #calculate area
+    area = length * width
+    #calculate perimeter
+    perimeter = 2 * (length + width)
+    #return area and perimeter as a tuple
+    return area, perimeter
+#function to calculate the area and perimeter of a circle
+def circle(radius):
+    #calculate area
+    area = 3.14 * radius ** 2
+    #calculate perimeter
+    perimeter = 2 * 3.14 * radius
+    #return area and perimeter as a tuple
+    return area, perimeter
+#function to calculate the area and perimeter of a square
+def square(side):
+    #calculate the area
+    area = side ** 2
+    #calculate perimeter
+    perimeter = 4 * side
+    #return area and perimeter as a tuple
+    return area, perimeter
