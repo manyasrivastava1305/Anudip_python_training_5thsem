@@ -12,14 +12,14 @@ while True:
         print("\nExiting the program. Goodbye!")
         break
     # for other choices    
-    if shape not in ["rectangle", "circle", "square"]:
+    elif shape not in ["rectangle", "circle", "square"]:
         print("Invalid shape selection. Please try again.")
         continue
 
     # --------------------------------------------------------------
     # RECTANGLE LOGIC
     # --------------------------------------------------------------
-    if shape == "rectangle":
+    elif shape == "rectangle":
         while True:
             # Validate input values
             length = float(input("\nEnter the length of the rectangle: "))
