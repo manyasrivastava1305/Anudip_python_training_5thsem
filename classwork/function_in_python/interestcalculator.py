@@ -1,4 +1,5 @@
 #function to calculate simple interest
+
 def simple_interest(principal, rate, time):
     #calculate simple interest
     interest = (principal * rate * time) / 100
