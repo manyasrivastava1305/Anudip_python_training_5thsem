@@ -1,0 +1,10 @@
+Hello How are you
+I am fine
+What about you?
+I am also fine.
+What are doing?
+I am creating a program for write operation.
+It is done by using python program.
+Python is very simple and easy language.
+It is object oriented programming.
+It is used for analysis purpose.
